@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="post">
+
+	{% include lnb.html cate_name=page.categories.first now_post=page %}
+
+	<div id="content">
+		<h1>{{ page.title | escape }}</h1>
+
+		<div id="content-body" class="md-theme">
+			{{ content }}
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		$('#content-body pre code').each(function() {
+			var className = $(this).parent().parent().attr('class');
+			if (!className) return;
+
+			var lang = className.split('language-')[1].split(' ')[0];
+			var cs = new ColorScripter(lang);
+
+			$(this).html( cs.color( $(this).text() ) );
+		});
+	</script>
+</div>

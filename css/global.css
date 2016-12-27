@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+/* normalize.css */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
+audio,canvas,video{display:inline-block;}
+audio:not([controls]){display:none;height:0;}
+[hidden]{display:none;}
+html{background:#fff;color:#000;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+a:focus{outline:thin dotted;}
+a:active,a:hover{outline:0;}
+h1{font-size:2em;margin:.67em 0;}
+abbr[title]{border-bottom:1px dotted;}
+b,strong{font-weight:700;}
+dfn{font-style:italic;}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}
+mark{background:#ff0;color:#000;}
+/*code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}*/
+pre{white-space:pre-wrap;}
+q{quotes:\201C \201D \2018 \2019;}
+small{font-size:80%;}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-.5em;}
+sub{bottom:-.25em;}
+img{border:0;}
+svg:not(:root){overflow:hidden;}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em;}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}
+button,input{line-height:normal;}
+button,select{text-transform:none;}
+button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}
+button[disabled],html input[disabled]{cursor:default;}
+input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}
+input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}
+textarea{overflow:auto;vertical-align:top;}
+table{border-collapse:collapse;border-spacing:0;}
+body,figure{margin:0;}
+legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+/* end of normalize.css */
+
+a img{ border:none; outline:none }
+
+.clearfix{ *zoom:1 }
+.clearfix:after{ display:block; clear:both; content:"" }
+.fl{ float:left }
+.fr{ float:right }
+.bold{ font-weight: bold }
+.hidden{ visibility: hidden }
+
+
+
+
+
+html,body{
+	margin: 0;
+	padding: 0;
+	background-color: #f0f0f0;
+	/*background-color: white;*/
+	font-size: 16px;
+}
+
+
+
+.common-btn{
+	background-color: #eee;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	padding: 5px 10px;
+
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.common-btn:hover{
+	background-color: #f3f3f3;
+	color: #666;
+	border-color: #d0d0d0;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+
+.common-btn:active{
+	background-color: #ddd;
+	box-shadow: inset 0 2px 4px rgba(0,0,0,0.15)
+}
+
+
+.square-btn{
+	margin: 0;
+	padding: 5px 7px;
+
+	font-size: 17px;
+	background-color: #eee;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+
+	cursor: pointer;
+	color: #111;
+	text-decoration: none;
+}
+.square-btn:hover{ background-color: #f3f3f3; color: #666 }
+
+
+
+
+
+
+
+
+
+
+header{
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	width: 100%;
+	/*padding: 11px 0 0;*/
+	/*border-bottom: 8px solid #9933CC;*/
+}
+
+header > .site-title{
+	padding: 14px 40px;
+	font-size: 20px;
+	/*background-color: white;*/
+	background-color: #01579B;
+}
+
+header > .site-title a{
+	color: #333;
+	text-decoration: none;
+}
+
+header > .site-title .logo{
+	/*visibility: hidden;*/
+	width: 165px;
+	height: 40px;
+	background-image: url('/images/logo@2x.png');
+	background-size: 165px 40px;
+	background-repeat: no-repeat;
+
+	/*margin-left: 40px;*/
+}
+
+
+header > nav{
+	width: 100%;
+
+	background-color: #0277BD;
+	/*border-bottom: 2px solid #2979ff;*/
+	/*border-top: 1px solid #eee;*/
+}
+
+header > nav > ul{
+	list-style: none;
+	margin: 0;
+	padding: 0 30px;
+	font-size: 14px;
+}
+
+header > nav > ul a{
+	/*color: #111;*/
+	color: white;
+	text-decoration: none;
+}
+
+header > nav > ul li{
+	float: left;
+	margin: 0;
+	padding: 7px 20px;
+	transition: background-color 0.4s;
+}
+header > nav > ul li:hover{ background-color: rgba(0,0,0,0.2); }
+header > nav > ul li.selected{ background-color: #039BE5 }
+
+
+.post{
+	color: #444;
+}
+
+.post h1{
+	font-size: 36px;
+	font-weight: 400;
+	padding: 0 0 5px 0;
+	margin: 5px 0 -10px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+footer{
+	border-top: 1px solid #ddd;
+	padding: 15px 0;
+	font-size: 12px;
+	color: #aaa;
+	text-align: center;
+}
+
+
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	header > .site-title .logo{
+		/*background-image: url('/images/logo_v2@2x.png');*/
+	}
+}
+
+

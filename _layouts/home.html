@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{ site.title }}</title>
+
+	<meta name="description" content="{{ site.description }}">
+	<meta name="keywords" content="{{ site.keywords }}">
+	<meta name="Robots" content="ALL">
+
+	<link rel="stylesheet" type="text/css" href="{{ '/css/global.css' | absolute_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/home.css' | absolute_url }}">
+</head>
+<body>
+	<header>
+		<div class="site-title clearfix">
+			<a href="{{ site.url }}">
+				<div class="logo fl"></div>
+			</a>
+		</div>
+	</header>
+
+	<div id="home-intro">
+		<div class="content">
+			<h1>Learn Simply.</h1>
+			<h2>
+				꼭 필요한 정보만 모아놓았어요<br>
+				간단하게 배우세요
+			</h2>
+		</div>
+	</div>
+
+	<div id="courses" class="clearfix">
+		<ul>
+			<a href="/html-course">
+				<li>
+					<h4>HTML 코스</h4>
+					<div class="description">웹페이지의 골격을 만드는 언어입니다.</div>
+				</li>
+			</a>
+			<a href="/css-course">
+				<li>
+					<h4>CSS 코스</h4>
+					<div class="description">웹페이지를 꾸밀 때 사용하는 언어입니다.</div>
+				</li>
+			</a>
+			<a href="/javascript-course">
+				<li>
+					<h4>JavaScript 코스</h4>
+					<div class="description">웹을 더욱 동적이게 만들어주는 스크립트 언어입니다.</div>
+				</li>
+			</a>
+		</ul>
+	</div>
+
+	<footer>
+		&copy; 2016 ofcourse
+	</footer>
+
+	<!--[if lt IE 9]>
+	  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</body>
+</html>

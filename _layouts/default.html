@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.title %} {{ page.title }} - {% endif %} {{ site.title }}</title>
+
+	<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 260 | escape }}">
+	<meta name="subject" content="{{ page.title }}">
+	<meta name="classification" content="{{ page.categories }}">
+
+	{% if page.keywords %}
+	<meta name="keywords" content="{{ page.keywords }}">
+	{% else %}
+	<meta name="keywords" content="{{ site.keywords }}">
+	{% endif %}
+	<meta name="Robots" content="ALL">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/global.css' | absolute_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/lnb.css' | absolute_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/markdown-theme.css' | absolute_url }}"">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://api.colorscripter.com/code/colorscripter.js"></script>
+</head>
+<body>
+	<header>
+		<div class="site-title clearfix">
+			<a href="{{ site.url }}">
+				<div class="logo fl"></div>
+			</a>
+		</div>
+		<nav>
+			<ul class="clearfix">
+				{% for cat in site.categories %}
+					<a href="{{ cat | first | absolute_url }}">
+						<li {% if page.categories.first == cat.first %} class="selected" {% endif %}>
+							{{ cat | first | upcase }} 코스
+						</li>
+					</a>
+				{% endfor %}
+			</ul>
+		</nav>
+	</header>
+
+	{{ content }}
+
+	<footer>
+		&copy; 2016 ofcourse
+	</footer>
+
+	<!--[if lt IE 9]>
+	  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</body>
+</html>
