@@ -1,28 +1,74 @@
----
-layout: default
----
-<div class="post">
+<!doctype html>
+<html>
+<head>	
+	{% include head.html %}
 
-	{% include lnb.html cate_name=page.categories.first now_post=page %}
+	<link rel="stylesheet" type="text/css" href="{{ '/css/lnb.css' | absolute_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/post.css' | absolute_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/markdown-theme.css' | absolute_url }}"">
 
-	<div id="content">
-		<h1>{{ page.title | escape }}</h1>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://api.colorscripter.com/code/colorscripter.js"></script>
+</head>
+<body>
+	<header>
+		{% include logo.html %}
+		{% include gnb.html %}
+	</header>
 
-		<div id="content-body" class="md-theme">
-			{{ content }}
+	<div>
+		{% include lnb.html cate_name=page.categories.first now_post=page %}
+
+		<div id="content">
+			<div class="post">
+				<h1>{{ page.title | escape }}</h1>
+
+				<div class="post-body md-theme">
+					{{ content }}
+				</div>
+			</div>
+
+			<div class="pagination">
+				{% if page.previous and page.categories == page.previous.categories %}
+				<a href="{{ page.next.url }}" class="prev">
+					<i class="fa fa-caret-left sub" aria-hidden="true"></i>
+					<span class="sub">이전 강의:</span>
+					<span>{{ page.previous.title | escape }}</span>
+				</a>
+				{% endif %}
+				{% if page.next and page.categories == page.next.categories %}
+				<a href="{{ page.next.url }}" class="next">
+					<span class="sub">다음 강의:</span>
+					<span>{{ page.next.title | escape }}</span>
+					<i class="fa fa-caret-right sub" aria-hidden="true"></i>
+				</a>
+				{% endif %}
+			</div>
+
 		</div>
+
+		<script type="text/javascript">
+			
+			$('#content').css('min-height', $('#lnb').outerHeight() + 'px');
+
+			$('.post-body pre code').each(function() {
+				var dom = $(this).parent().parent();
+
+				if (dom.prev().is('h2') && dom.prev().text() == '예제') {
+					$('<div class="output-label">출력 결과</div><div class="output">'+ $(this).text() +'</div>').insertAfter(dom);
+				}
+
+				var className = dom.attr('class');
+				if (!className) return;
+
+				var lang = className.split('language-')[1].split(' ')[0];
+				var cs = new ColorScripter(lang);
+
+				$(this).html( cs.color( $(this).text() ) );
+			});
+		</script>
 	</div>
 
-	<script type="text/javascript">
-		
-		$('#content-body pre code').each(function() {
-			var className = $(this).parent().parent().attr('class');
-			if (!className) return;
-
-			var lang = className.split('language-')[1].split(' ')[0];
-			var cs = new ColorScripter(lang);
-
-			$(this).html( cs.color( $(this).text() ) );
-		});
-	</script>
-</div>
+	{% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+.post{
+	padding: 20px;
+	color: #444;
+}
+
+.post h1{
+	font-size: 36px;
+	font-weight: 400;
+	padding: 0 0 5px 0;
+	margin: 5px 0 -10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.post .output-label {
+	color: #666;
+	font-style: italic;
+	margin-top: 10px;
+	margin-bottom: 3px;
+}
+
+.post .output {
+	background-color: #f7f7f7;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin: 3px 0;
+	padding: 5px;
+}
+
+.pagination{
+	background-color: #fafafa;
+	border-top: 1px solid #e0e0e0;
+	padding: 10px;
+}
+
+.pagination a{
+	display: inline-block;
+	*zoom: 1;
+	padding: 3px 7px;
+	color: #444;
+	text-decoration: none;
+	font-size: 14px;
+}
+.pagination a:hover{ text-decoration: underline; }
+.pagination a.prev{ border-right: 1px solid #ddd; padding-right: 12px }
+
+.pagination a .sub{ color: #888 }
+.pagination a i{ padding: 0 3px }

@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: OfCourse
+title: ofcourse
 email: prevdev@gmail.com
 description: "웹 개발에 꼭 필요한 정보만 모아두었어요. 간단하게 HTML, CSS 및 JavaScript를 배우세요."
 baseurl: "" # the subpath of your site, e.g. /blog

@@ -1,32 +1,17 @@
 @charset "utf-8";
 
 #home-intro{
-	height: 320px;
+	padding: 40px 0 70px;
     background-color: #01579B;
 }
 
-#home-intro .content{
-	position: absolute;
-	width: 600px;
-	left: 50%;
-	margin-left: -300px;
-	text-align: center;
-
-	top: 120px;
-	z-index: 3;
+#home-intro #home-intro-slogan{
+	width: 380px;
+	height: 160px;
+	margin: 0 auto;
+	background-image: url('/images/learn_simply.png');
+	background-size: 380px 160px;
 }
-
-#home-intro .content h1,
-#home-intro .content h2{
-	width: inherit;
-	color: white;	
-	text-align: center;
-	margin: 17px 0;
-}
-
-#home-intro .content h1{ font-size: 60px; font-weight: bold; }
-#home-intro .content h2{ font-size: 30px; font-weight: 100; }
-
 
 
 #courses{
@@ -74,4 +59,15 @@
 	padding: 0 20px;
 	font-size: 14px;
 	color: #666;
+}
+
+footer{
+	border-top: none;
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	#home-intro #home-intro-slogan{
+		background-image: url('/images/learn_simply@2x.png');
+	}
 }

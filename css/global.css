@@ -47,16 +47,12 @@ a img{ border:none; outline:none }
 .fr{ float:right }
 .bold{ font-weight: bold }
 .hidden{ visibility: hidden }
-
-
-
-
+.hidden2{ display: none }
 
 html,body{
 	margin: 0;
 	padding: 0;
 	background-color: #f0f0f0;
-	/*background-color: white;*/
 	font-size: 16px;
 }
 
@@ -104,25 +100,16 @@ html,body{
 
 
 
-
-
-
-
-
 header{
 	top: 0;
 	left: 0;
 	z-index: 10;
-
 	width: 100%;
-	/*padding: 11px 0 0;*/
-	/*border-bottom: 8px solid #9933CC;*/
 }
 
 header > .site-title{
 	padding: 14px 40px;
 	font-size: 20px;
-	/*background-color: white;*/
 	background-color: #01579B;
 }
 
@@ -132,14 +119,11 @@ header > .site-title a{
 }
 
 header > .site-title .logo{
-	/*visibility: hidden;*/
 	width: 165px;
 	height: 40px;
-	background-image: url('/images/logo@2x.png');
+	background-image: url('/images/logo.png');
 	background-size: 165px 40px;
 	background-repeat: no-repeat;
-
-	/*margin-left: 40px;*/
 }
 
 
@@ -147,8 +131,6 @@ header > nav{
 	width: 100%;
 
 	background-color: #0277BD;
-	/*border-bottom: 2px solid #2979ff;*/
-	/*border-top: 1px solid #eee;*/
 }
 
 header > nav > ul{
@@ -159,7 +141,6 @@ header > nav > ul{
 }
 
 header > nav > ul a{
-	/*color: #111;*/
 	color: white;
 	text-decoration: none;
 }
@@ -174,18 +155,6 @@ header > nav > ul li:hover{ background-color: rgba(0,0,0,0.2); }
 header > nav > ul li.selected{ background-color: #039BE5 }
 
 
-.post{
-	color: #444;
-}
-
-.post h1{
-	font-size: 36px;
-	font-weight: 400;
-	padding: 0 0 5px 0;
-	margin: 5px 0 -10px;
-	border-bottom: 1px solid #ddd;
-}
-
 
 footer{
 	border-top: 1px solid #ddd;
@@ -199,7 +168,7 @@ footer{
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	header > .site-title .logo{
-		/*background-image: url('/images/logo_v2@2x.png');*/
+		background-image: url('/images/logo@2x.png');
 	}
 }
 

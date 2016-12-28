@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{% if page.title %} {{ page.title }} - {% endif %} {{ site.title }}</title>
+
+{% if page.title %}
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 260 | escape }}">
+<meta name="subject" content="{{ page.title }}">
+<meta name="classification" content="{{ page.categories }}">
+
+{% else %}
+<meta name="description" content="{{ site.description }}">
+
+{% endif %}
+
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords }}">
+{% else %}
+<meta name="keywords" content="{{ site.keywords }}">
+{% endif %}
+<meta name="Robots" content="ALL">
+
+<link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ '/css/global.css' | absolute_url }}">

@@ -2,8 +2,8 @@
 
 #lnb{
 	position: absolute;
-	width: 150px;
-	padding: 20px 5px 10px 15px;
+	width: 165px;
+	padding: 20px 0 10px 15px;
 }
 
 #lnb h3{
@@ -49,18 +49,19 @@
 }
 
 #lnb ul li.sub{
-	margin-left: 20px;
+	margin-left: 15px;
 	padding-top: 7px;
 	padding-bottom: 5px;
+	font-size: 14px;
 }
 
 
 #content{
 	position: relative;
-	min-height: 650px;
+	/*min-height: 600px;*/
 
 	background-color: white;
-	padding: 20px;
+	/*padding: 20px;*/
 	margin-left: 180px;
 
 	border-left: 1px solid #ddd;
