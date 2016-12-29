@@ -28,13 +28,19 @@
 	padding: 5px;
 }
 
-.pagination{
+.post-footer{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 	background-color: #fafafa;
 	border-top: 1px solid #e0e0e0;
+}
+
+.post-footer .pagination{
 	padding: 10px;
 }
 
-.pagination a{
+.post-footer .pagination a{
 	display: inline-block;
 	*zoom: 1;
 	padding: 3px 7px;
@@ -42,8 +48,9 @@
 	text-decoration: none;
 	font-size: 14px;
 }
-.pagination a:hover{ text-decoration: underline; }
-.pagination a.prev{ border-right: 1px solid #ddd; padding-right: 12px }
+.post-footer .pagination a:hover{ text-decoration: underline; }
+.post-footer .pagination a.prev{ border-right: 1px solid #ddd; padding-right: 12px }
 
-.pagination a .sub{ color: #888 }
-.pagination a i{ padding: 0 3px }
+.post-footer .pagination a .sub{ color: #888 }
+.post-footer .pagination a i{ padding: 0 3px }
+

@@ -7,7 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ '/css/post.css' | absolute_url }}">
 	<link rel="stylesheet" type="text/css" href="{{ '/css/markdown-theme.css' | absolute_url }}"">
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="http://api.colorscripter.com/code/colorscripter.js"></script>
 </head>
 <body>
@@ -28,28 +27,30 @@
 				</div>
 			</div>
 
-			<div class="pagination">
-				{% if page.previous and page.categories == page.previous.categories %}
-				<a href="{{ page.next.url }}" class="prev">
-					<i class="fa fa-caret-left sub" aria-hidden="true"></i>
-					<span class="sub">이전 강의:</span>
-					<span>{{ page.previous.title | escape }}</span>
-				</a>
-				{% endif %}
-				{% if page.next and page.categories == page.next.categories %}
-				<a href="{{ page.next.url }}" class="next">
-					<span class="sub">다음 강의:</span>
-					<span>{{ page.next.title | escape }}</span>
-					<i class="fa fa-caret-right sub" aria-hidden="true"></i>
-				</a>
-				{% endif %}
+			<div class="post-footer">
+				<div class="pagination">
+					{% if page.previous and page.categories == page.previous.categories %}
+					<a href="{{ page.next.url }}" class="prev">
+						<i class="fa fa-caret-left sub" aria-hidden="true"></i>
+						<span class="sub">이전 강의:</span>
+						<span>{{ page.previous.title | escape }}</span>
+					</a>
+					{% endif %}
+					{% if page.next and page.categories == page.next.categories %}
+					<a href="{{ page.next.url }}" class="next">
+						<span class="sub">다음 강의:</span>
+						<span>{{ page.next.title | escape }}</span>
+						<i class="fa fa-caret-right sub" aria-hidden="true"></i>
+					</a>
+					{% endif %}
+				</div>
 			</div>
 
 		</div>
 
 		<script type="text/javascript">
-			
-			$('#content').css('min-height', $('#lnb').outerHeight() + 'px');
+			var paddingH = $('#content').innerHeight() - $('#content').height();
+			$('#content').css('min-height', $('#lnb').outerHeight() - paddingH + 'px');
 
 			$('.post-body pre code').each(function() {
 				var dom = $(this).parent().parent();

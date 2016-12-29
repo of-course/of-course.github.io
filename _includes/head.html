@@ -2,7 +2,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{% if page.title %} {{ page.title }} - {% endif %} {{ site.title }}</title>
+
+
+{% if page.title %}
+	{% assign cat = page.categories.first | upcase %}
+	{% assign title_1ss = page.title | split: ' ' | first %}
+
+	{% if cat == title_1ss %}
+		<title>{{ page.title }} - {{ site.title }}</title>
+	{% else %}
+		<title>{{ page.categories.first | upcase }} {{ page.title }} - {{ site.title }}</title>
+	{% endif %}
+{% else %}
+<title>{{ site.title }}</title>
+{% endif %}
 
 {% if page.title %}
 <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 260 | escape }}">
@@ -11,7 +24,6 @@
 
 {% else %}
 <meta name="description" content="{{ site.description }}">
-
 {% endif %}
 
 {% if page.keywords %}
@@ -24,3 +36,5 @@
 <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="{{ '/css/global.css' | absolute_url }}">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

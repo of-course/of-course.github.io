@@ -7,8 +7,10 @@
 	{% for post in site.categories.[include.cate_name] reversed %}
 		<a href="{{ post.url }}">
 			{% assign day = post.date | split: " " | first | split: "-" | last %}
-			<li class="{% if post == include.now_post %} selected{% endif %}{% if day != '01' %} sub{% endif %}">{{ post.title | escape }}</li>
-			
+
+			<li class="{% if post == include.now_post %} selected{% endif %}{% if day != '01' %} sub{% endif %}">
+				{{ post.title | escape }}
+			</li>
 		</a>
 	{% endfor %}
 	</ul>

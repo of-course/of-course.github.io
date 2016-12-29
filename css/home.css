@@ -11,6 +11,7 @@
 	margin: 0 auto;
 	background-image: url('/images/learn_simply.png');
 	background-size: 380px 160px;
+	background-repeat: no-repeat;
 }
 
 
@@ -25,6 +26,7 @@
 	padding: 0;
 }
 
+#courses a{ text-decoration: none; }
 
 #courses ul li{
 	float: left;
@@ -69,5 +71,31 @@ footer{
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	#home-intro #home-intro-slogan{
 		background-image: url('/images/learn_simply@2x.png');
+	}
+}
+
+
+@media (max-width: 700px) {
+	#home-intro{
+		padding: 30px 50px 10px;
+	}
+
+	#home-intro #home-intro-slogan{
+		width: 100%;
+		background-size: 100%;
+	}
+
+	#courses{
+		width: 100%;
+	}
+
+	#courses ul{
+		margin: 0 20px;
+	}
+
+	#courses ul li{
+		float: none;
+		width: 100%;
+		margin: 10px 0;
 	}
 }

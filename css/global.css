@@ -127,6 +127,17 @@ header > .site-title .logo{
 }
 
 
+header > .site-title .menu-bar{
+	position: absolute;
+	top: 13px;
+	left: 16px;
+	font-size: 25px;
+	color: white;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 13px;
+	padding: 7px 10px 4px 10px;
+}
+
 header > nav{
 	width: 100%;
 
@@ -172,4 +183,17 @@ footer{
 	}
 }
 
+
+@media (max-width: 700px) {
+	header > .site-title .logo{
+		margin: 0 auto;
+		float: none;
+	}
+
+	header > nav > ul li{
+		width: 33%;
+		padding: 7px 0;
+		text-align: center;
+	}
+}
 
