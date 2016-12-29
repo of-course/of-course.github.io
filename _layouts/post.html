@@ -1,11 +1,14 @@
+---
+layout: compress
+---
 <!doctype html>
 <html>
 <head>	
 	{% include head.html %}
 
+	<link rel="stylesheet" type="text/css" href="{{ '/css/markdown-theme.css' | absolute_url }}"">
 	<link rel="stylesheet" type="text/css" href="{{ '/css/lnb.css' | absolute_url }}">
 	<link rel="stylesheet" type="text/css" href="{{ '/css/post.css' | absolute_url }}">
-	<link rel="stylesheet" type="text/css" href="{{ '/css/markdown-theme.css' | absolute_url }}"">
 
 	<script type="text/javascript" src="http://api.colorscripter.com/code/colorscripter.js"></script>
 </head>
@@ -55,7 +58,7 @@
 			$('.post-body pre code').each(function() {
 				var dom = $(this).parent().parent();
 
-				if (dom.prev().is('h2') && dom.prev().text() == '예제') {
+				if ((dom.prev().is('h2') || dom.prev().is('h3')) && dom.prev().text() == '예제') {
 					$('<div class="output-label">출력 결과</div><div class="output">'+ $(this).text() +'</div>').insertAfter(dom);
 				}
 

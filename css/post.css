@@ -13,6 +13,11 @@
 	border-bottom: 1px solid #ddd;
 }
 
+
+.post table td, .post table th{
+	padding: 5px;
+}
+
 .post .output-label {
 	color: #666;
 	font-style: italic;
@@ -27,6 +32,17 @@
 	margin: 3px 0;
 	padding: 5px;
 }
+.post .output h2{
+    margin: initial;
+    padding-top: initial;
+    border-bottom: none;
+}
+
+.post .output input,
+.post .output select{
+	border: 1px solid #ddd;
+}
+
 
 .post-footer{
 	position: absolute;
