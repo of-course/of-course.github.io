@@ -65,7 +65,10 @@ layout: compress
 				var className = dom.attr('class');
 				if (!className) return;
 
-				var lang = className.split('language-')[1].split(' ')[0];
+				var temp = className.split('language-')[1];
+				if (!temp) return;
+
+				var lang = temp.split(' ')[0];
 				var cs = new ColorScripter(lang);
 
 				$(this).html( cs.color( $(this).text() ) );
