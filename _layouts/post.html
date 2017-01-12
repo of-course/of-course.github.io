@@ -33,7 +33,7 @@ layout: compress
 			<div class="post-footer">
 				<div class="pagination">
 					{% if page.previous and page.categories == page.previous.categories %}
-					<a href="{{ page.next.url }}" class="prev">
+					<a href="{{ page.previous.url }}" class="prev">
 						<i class="fa fa-caret-left sub" aria-hidden="true"></i>
 						<span class="sub">이전 강의:</span>
 						<span>{{ page.previous.title | escape }}</span>

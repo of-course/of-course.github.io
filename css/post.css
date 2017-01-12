@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .post{
-	padding: 20px;
+	padding: 20px 20px 50px;
 	color: #444;
 }
 
@@ -14,9 +14,6 @@
 }
 
 
-.post table td, .post table th{
-	padding: 5px;
-}
 
 .post .output-label {
 	color: #666;
@@ -31,6 +28,7 @@
 	border-radius: 3px;
 	margin: 3px 0;
 	padding: 5px;
+	position: relative;
 }
 .post .output h2{
     margin: initial;
@@ -70,3 +68,8 @@
 .post-footer .pagination a .sub{ color: #888 }
 .post-footer .pagination a i{ padding: 0 3px }
 
+@media (max-width: 700px) {
+	.post img{ max-width: 100% }
+
+	.post pre code{ tab-size: 2; }
+}
