@@ -9,10 +9,11 @@ categories: css
 
 아래의 세부적인 속성을 가집니다.
 
-- [`background-color`](#background-color): 배경 색
-- [`background-image`](#background-image): 배경 이미지
-- [`background-repeat`](#background-repeat): 배경 이미지 반복 여부
-- [`background-position`](#background-position): 배경 이미지 위치
+| [background-color](#background-color)      | 배경 색            |
+| [background-image](#background-image)      | 배경 이미지         |
+| [background-repeat](#background-repeat)    | 배경 이미지 반복 여부 |
+| [background-position](#background-position)| 배경 이미지 위치     |
+
 
 ## background-color
 배경색을 의미하며, 값은 [color 속성](/css-course/color-속성)의 포맷을 사용합니다.
