@@ -30,3 +30,5 @@ exclude: [vendor]
 
 gems:
   - jekyll-redirect-from
+
+future: true
