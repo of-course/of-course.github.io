@@ -1,7 +1,10 @@
+{% assign cat_title = include.cate_name | upcase %}
+{% if cat_title == 'JS' %} {% assign cat_title = 'JavaScript' %} {% endif %}
+
 <div id="lnb">
 	<h3>
 		<i class="fa fa-code" aria-hidden="true"></i>
-		<span>{{ include.cate_name | upcase }} 코스</span>
+		<span>{{ cat_title }} 코스</span>
 	</h3>
 	<ul>
 	{% for post in site.categories.[include.cate_name] reversed %}

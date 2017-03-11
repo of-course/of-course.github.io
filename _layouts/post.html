@@ -47,32 +47,53 @@ layout: compress
 					</a>
 					{% endif %}
 				</div>
+
+				<div id="disqus_thread"></div>
 			</div>
-
 		</div>
-
+	
 		<script type="text/javascript">
-			var paddingH = $('#content').innerHeight() - $('#content').height();
-			$('#content').css('min-height', $('#lnb').outerHeight() - paddingH + 'px');
+			var disqus_config = function () {
+				this.page.url = '{{ page.url | prepend: site.baseurl | prepend: site.url }}';
+				this.page.identifier = '{{ page.url }}';
 
-			$('.post-body pre code').each(function() {
-				var dom = $(this).parent().parent();
+				this.callbacks.afterRender.push(function() {
+					console.log('ar');
+				});
+			};
+			(function() {
+				/* Disqus */
+				var d = document, s = d.createElement('script');
+				s.src = '//ofcourse-1.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
 
-				if ((dom.prev().is('h2') || dom.prev().is('h3')) && dom.prev().text() == '예제') {
-					$('<div class="output-label">출력 결과</div><div class="output">'+ $(this).text() +'</div>').insertAfter(dom);
-				}
 
-				var className = dom.attr('class');
-				if (!className) return;
+			(function() {
+				/* rendering output */
+				var paddingH = $('#content').innerHeight() - $('#content').height();
+				$('#content').css('min-height', $('#lnb').outerHeight() - paddingH + 'px');
 
-				var temp = className.split('language-')[1];
-				if (!temp) return;
+				$('.post-body pre code').each(function() {
+					var dom = $(this).parent().parent();
 
-				var lang = temp.split(' ')[0];
-				var cs = new ColorScripter(lang);
+					if ((dom.prev().is('h2') || dom.prev().is('h3')) && dom.prev().text() == '예제') {
+						$('<div class="output-label">출력 결과</div><div class="output">'+ $(this).text() +'</div>').insertAfter(dom);
+					}
 
-				$(this).html( cs.color( $(this).text() ) );
-			});
+					var className = dom.attr('class');
+					if (!className) return;
+
+					var temp = className.split('language-')[1];
+					if (!temp) return;
+
+					var lang = temp.split(' ')[0];
+					var cs = new ColorScripter(lang);
+
+					$(this).html( cs.color( $(this).text() ) );
+				});
+			})();
 		</script>
 	</div>
 

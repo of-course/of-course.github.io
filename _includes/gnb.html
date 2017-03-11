@@ -2,10 +2,13 @@
 	<ul class="clearfix">
 		{% for cat in site.categories %}
 			{% assign first_post = cat.[1] | last %}
+			{% assign cat_title = cat | first | upcase %}
+			
+			{% if cat_title == 'JS' %} {% assign cat_title = 'JavaScript' %} {% endif %}
 
 			<a href="{{ first_post.url }}">
 				<li {% if page.categories.first == cat.first %} class="selected" {% endif %}>
-					{{ cat | first | upcase }} 코스
+					{{ cat_title }} 코스
 				</li>
 			</a>
 		{% endfor %}

@@ -4,12 +4,15 @@
 
 {% if page.title %}
 	{% assign cat = page.categories.first | upcase %}
+	{% if cat == 'JS' %} {% assign cat = 'JavaScript' %} {% endif %}
+
 	{% assign title_1ss = page.title | split: ' ' | first %}
 
 	{% if cat == title_1ss %}
 		<title>{{ page.title }} - {{ site.title }}</title>
 	{% else %}
-		<title>{{ page.categories.first | upcase }} {{ page.title }} - {{ site.title }}</title>
+		<title>{{ cat }} {{ page.title }} - {{ site.title }}</title>
+		
 	{% endif %}
 {% else %}
 <title>{{ site.title }}</title>

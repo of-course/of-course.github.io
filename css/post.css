@@ -13,7 +13,14 @@
 	border-bottom: 1px solid #ddd;
 }
 
-
+.post .alert-box{
+	padding: 8px 12px 5px;
+	background-color: #fffcea;
+	border: 1px solid #fde394;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #544300;
+}
 
 .post .output-label {
 	color: #666;
@@ -30,7 +37,9 @@
 	padding: 5px;
 	position: relative;
 }
-.post .output h2{
+.post .output h2,
+.post .output h3,
+.post .output h4{
     margin: initial;
     padding-top: initial;
     border-bottom: none;
@@ -43,15 +52,15 @@
 
 
 .post-footer{
-	position: absolute;
+	/*position: absolute;*/
 	width: 100%;
 	bottom: 0;
-	background-color: #fafafa;
 	border-top: 1px solid #e0e0e0;
 }
 
 .post-footer .pagination{
 	padding: 10px;
+	background-color: #fafafa;
 }
 
 .post-footer .pagination a{
@@ -67,6 +76,12 @@
 
 .post-footer .pagination a .sub{ color: #888 }
 .post-footer .pagination a i{ padding: 0 3px }
+
+
+.post-footer #disqus_thread{
+	padding: 5px 30px;
+	border-top: 1px solid #e0e0e0;
+}
 
 @media (max-width: 700px) {
 	.post img{ max-width: 100% }
