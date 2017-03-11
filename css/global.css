@@ -170,11 +170,23 @@ header > nav > ul li.selected{ background-color: #039BE5 }
 footer{
 	border-top: 1px solid #ddd;
 	padding: 15px 0;
-	font-size: 12px;
-	color: #aaa;
+	font-size: 14px;
+	color: #888;
 	text-align: center;
 }
 
+footer .github{
+	display: inline-block;
+	margin-left: 5px;
+	padding-left: 10px;
+	border-left: 1px solid #ccc;
+}
+
+footer a{
+	color: #888;
+	text-decoration: none;
+}
+footer a:hover{ color: #666 }
 
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
