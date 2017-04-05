@@ -1,8 +1,10 @@
 # ofcourse
-[![Build Status](https://travis-ci.org/of-course/of-course.svg?branch=master)](https://travis-ci.org/of-course/of-course)  
+[![Build Status](https://travis-ci.org/of-course/of-course.github.io.svg?branch=master)](https://travis-ci.org/of-course/of-course.github.io)  
 
-꼭 필요한 정보만 모아놓은 웹 강의 사이트
+꼭 필요한 정보만 모아놓은 웹 강의 사이트  
+([div.or.kr](http://div.or.kr)의 리뉴얼 프로젝트입니다.)  
 ![Screenshot](https://ofcourse.kr/images/screenshot.png)
+
 
 
 ## 코스
