@@ -9,6 +9,8 @@ permalink: "/:categories-course/:title"
 
 keywords: "www,web,world wide web,html,css,javascript"
 markdown: kramdown
+highlighter: none
+
 # theme: minima
 exclude: [vendor]
 

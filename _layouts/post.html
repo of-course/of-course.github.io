@@ -76,13 +76,12 @@ layout: compress
 				$('#content').css('min-height', $('#lnb').outerHeight() - paddingH + 'px');
 
 				$('.post-body pre code').each(function() {
-					var dom = $(this).parent().parent();
-
+					var dom = $(this).parent();
 					if ((dom.prev().is('h2') || dom.prev().is('h3')) && dom.prev().text() == '예제') {
 						$('<div class="output-label">출력 결과</div><div class="output">'+ $(this).text() +'</div>').insertAfter(dom);
 					}
-
-					var className = dom.attr('class');
+					
+					var className = $(this).attr('class');
 					if (!className) return;
 
 					var temp = className.split('language-')[1];
