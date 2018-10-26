@@ -8,7 +8,7 @@ layout: compress
 
 	<link rel="stylesheet" type="text/css" href="{{ '/css/markdown-theme.css' | absolute_url }}"">
 	<link rel="stylesheet" type="text/css" href="{{ '/css/lnb.css' | absolute_url }}">
-	<link rel="stylesheet" type="text/css" href="{{ '/css/post.css' | absolute_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/post.css?2' | absolute_url }}">
 
 	<script type="text/javascript" src="https://assets.colorscripter.com/libs/3/colorscripter.js"></script>
 </head>
@@ -22,18 +22,19 @@ layout: compress
 		{% include lnb.html cate_name=page.categories.first now_post=page %}
 
 		<div id="content">
-			<div class="post">
-				<h1>{{ page.title | escape }}</h1>
-
+			<aside class="ad">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<ins class="adsbygoogle"
-					style="display:block; margin-top: 35px"
-					data-ad-client="ca-pub-4476671104014830"
-					data-ad-slot="9559268128"
-					data-ad-format="auto"></ins>
+				     style="display:inline-block;width:300px;height:600px"
+				     data-ad-client="ca-pub-4476671104014830"
+				     data-ad-slot="3094496737"></ins>
 				<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
+			</aside>
+
+			<div class="post">
+				<h1>{{ page.title | escape }}</h1>
 
 				<div class="post-body md-theme">
 					{{ content }}

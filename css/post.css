@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+aside.ad{ display: none; }
+
 .post{
 	padding: 20px 20px 50px;
 	color: #444;
@@ -87,4 +89,12 @@
 	.post img{ max-width: 100% }
 
 	.post pre code{ tab-size: 2; }
+}
+
+
+@media (min-width: 1400px) {
+	/* Only show ad if screen size is over 1400px */
+	aside.ad{ display: block; float: right; }
+	.post{ float: left; width: calc(100% - 350px) }
+	.post-footer{ clear: both; }
 }
