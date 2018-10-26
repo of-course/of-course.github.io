@@ -94,7 +94,7 @@ aside.ad{ display: none; }
 
 @media (min-width: 1400px) {
 	/* Only show ad if screen size is over 1400px */
-	aside.ad{ display: block; float: right; }
-	.post{ float: left; width: calc(100% - 350px) }
+	aside.ad{ display: block; float: right; margin: 15px; right: 0 }
+	.post{ float: left; width: calc(100% - 370px) }
 	.post-footer{ clear: both; }
 }

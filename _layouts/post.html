@@ -104,6 +104,35 @@ layout: compress
 					$(this).html( cs.color( $(this).text() ) );
 				});
 			})();
+
+			(function() {
+				var ad = $('aside.ad');
+				var maxOffset = 100 + $('.post-body').outerHeight() - ad.outerHeight();
+
+				if (maxOffset < 0)
+					ad.hide();
+				
+				$(window).on('scroll', function () {
+					if ($('aside.ad').css('display') != 'block')
+						return;
+
+					var y = $(window).scrollTop();
+
+					if (y < 100) {
+						ad.css('position', 'absolute');
+						ad.css('top', 0);
+
+					} else if (y > maxOffset + 100) {
+						ad.css('position', 'absolute');
+						ad.css('top', maxOffset + 'px');
+
+					}else {
+						ad.css('position', 'fixed');
+						ad.css('top', 0);
+					}
+				});
+			})();
+
 		</script>
 	</div>
 
