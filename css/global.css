@@ -179,13 +179,6 @@ footer{
 	line-height: 1.8;
 }
 
-footer .github{
-	display: inline-block;
-	margin-left: 5px;
-	padding-left: 10px;
-	border-left: 1px solid #ccc;
-}
-
 footer a{
 	color: #888;
 	text-decoration: underline;
@@ -208,6 +201,12 @@ footer a{
 		width: 33%;
 		padding: 7px 0;
 		text-align: center;
+	}
+
+	footer {
+		font-size: 13px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
