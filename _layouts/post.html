@@ -6,9 +6,9 @@ layout: compress
 <head>	
 	{% include head.html %}
 
-	<link rel="stylesheet" type="text/css" href="{{ '/css/markdown-theme.css' | absolute_url }}"">
-	<link rel="stylesheet" type="text/css" href="{{ '/css/lnb.css' | absolute_url }}">
-	<link rel="stylesheet" type="text/css" href="{{ '/css/post.css?2' | absolute_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/markdown-theme.css?20190720' | absolute_url }}"">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/lnb.css?20190720' | absolute_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ '/css/post.css?20190720' | absolute_url }}">
 
 	<script type="text/javascript" src="https://assets.colorscripter.com/libs/3/colorscripter.js"></script>
 </head>
@@ -22,27 +22,26 @@ layout: compress
 		{% include lnb.html cate_name=page.categories.first now_post=page %}
 
 		<div id="content">
-			<aside class="ad">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle"
-				     style="display:inline-block;width:300px;height:600px"
-				     data-ad-client="ca-pub-4476671104014830"
-				     data-ad-slot="3094496737"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</aside>
-
 			<div class="post">
 				<h1>{{ page.title | escape }}</h1>
-
 				<div class="post-body md-theme">
 					{{ content }}
+
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<ins class="adsbygoogle"
+						style="display:block; text-align:center;"
+						data-ad-layout="in-article"
+						data-ad-format="fluid"
+						data-ad-client="ca-pub-4476671104014830"
+						data-ad-slot="5024364921"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
 				</div>
 			</div>
 
 			<div class="post-footer">
-				<div class="pagination">
+				<div class="pagination clearfix">
 					{% if page.previous and page.categories == page.previous.categories %}
 					<a href="{{ page.previous.url }}" class="prev">
 						<i class="fa fa-caret-left sub" aria-hidden="true"></i>
@@ -58,28 +57,10 @@ layout: compress
 					</a>
 					{% endif %}
 				</div>
-
-				<div id="disqus_thread"></div>
 			</div>
 		</div>
 	
 		<script type="text/javascript">
-			var disqus_config = function () {
-				this.page.url = '{{ page.url | prepend: site.baseurl | prepend: site.url }}';
-				this.page.identifier = '{{ page.url }}';
-
-				this.callbacks.afterRender.push(function() {
-					console.log('ar');
-				});
-			};
-			(function() {
-				/* Disqus */
-				var d = document, s = d.createElement('script');
-				s.src = '//ofcourse-1.disqus.com/embed.js';
-				s.setAttribute('data-timestamp', +new Date());
-				(d.head || d.body).appendChild(s);
-			})();
-
 
 			(function() {
 				/* rendering output */
@@ -104,35 +85,6 @@ layout: compress
 					$(this).html( cs.color( $(this).text() ) );
 				});
 			})();
-
-			(function() {
-				var ad = $('aside.ad');
-				var maxOffset = 100 + $('.post-body').outerHeight() - ad.outerHeight();
-
-				if (maxOffset < 0)
-					ad.hide();
-				
-				$(window).on('scroll', function () {
-					if ($('aside.ad').css('display') != 'block')
-						return;
-
-					var y = $(window).scrollTop();
-
-					if (y < 100) {
-						ad.css('position', 'absolute');
-						ad.css('top', 0);
-
-					} else if (y > maxOffset + 100) {
-						ad.css('position', 'absolute');
-						ad.css('top', maxOffset + 'px');
-
-					}else {
-						ad.css('position', 'fixed');
-						ad.css('top', 0);
-					}
-				});
-			})();
-
 		</script>
 	</div>
 
