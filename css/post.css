@@ -53,7 +53,7 @@ a.anchorjs-link:hover{
 	padding: 5px;
 	position: relative;
 	font-size: 16px;
-	line-height: 1;
+	line-height: initial;
 }
 .post .output h2,
 .post .output h3,
