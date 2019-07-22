@@ -12,6 +12,8 @@ layout: compress
 
 	<script type="text/javascript" src="https://assets.colorscripter.com/libs/3/colorscripter.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" integrity="sha256-m1eTvwEHwmsw4+XKF7BshClVJEPwTVycveNl0CS0Mkk=" crossorigin="anonymous"></script>
+
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
 	<header>
@@ -29,17 +31,16 @@ layout: compress
 					{{ content }}
 
 					<div style="margin-top: 30px;">
-						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 						<ins class="adsbygoogle"
-							style="display:block; text-align:center;"
-							data-ad-layout="in-article"
-							data-ad-format="fluid"
+							style="display:block;"
 							data-ad-client="ca-pub-4476671104014830"
-							data-ad-slot="5024364921"></ins>
-						<script>
-							(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
+							data-ad-slot="9559268128"
+							data-ad-layout="in-article"
+							data-ad-format="fluid"></ins>
 					</div>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({})
+					</script>
 
 					<p style="margin-top: 30px; font-size: 16px">
 						<a href="https://github.com/of-course/of-course.github.io/blob/master/{{ page.path | uri_escape }}">
@@ -74,6 +75,25 @@ layout: compress
 				placement: 'left'
 			};
 			anchors.add('h2');
+
+			var slots = ['5024364921', '7518612427', '3094496737'];
+			var adHtml = '<div style="margin-top: 30px">' +
+				'<ins class="adsbygoogle" style="display:block; text-align:center;" ' +
+				'data-ad-layout="in-article" ' +
+				'data-ad-format="fluid" ' +
+				'data-ad-client="ca-pub-4476671104014830" ' +
+				'data-ad-slot="{slot}"></ins></div>';
+
+			var headings = $('h2');
+			for (var i = 0; i < headings.length; i++) {
+				if (['개요', '사용법', '예제'].indexOf(headings[i].innerText) != -1)
+					continue;
+				if (slots.length == 0)
+					break;
+				
+				$(adHtml.replace('{slot}', slots.shift())).insertBefore(headings[i]);
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			}
 
 			(function() {
 				/* rendering output */
