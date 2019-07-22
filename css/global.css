@@ -143,8 +143,8 @@ header > .site-title .menu-bar{
 
 header > nav{
 	width: 100%;
-
-	background-color: #0277BD;
+	background: white;
+	border-bottom: 1px solid #ddd;
 }
 
 header > nav > ul{
@@ -155,7 +155,7 @@ header > nav > ul{
 }
 
 header > nav > ul a{
-	color: white;
+	color: #6d6d6d;
 	text-decoration: none;
 }
 
@@ -163,10 +163,19 @@ header > nav > ul li{
 	float: left;
 	margin: 0;
 	padding: 7px 20px;
-	transition: background-color 0.4s;
+	transition: all 0.4s;
+	border-bottom: 2px solid white;
 }
-header > nav > ul li:hover{ background-color: rgba(0,0,0,0.2); }
-header > nav > ul li.selected{ background-color: #039BE5 }
+header > nav > ul li:hover{
+	background-color: rgba(0,0,0,0.2);
+	border-bottom-color: rgba(0,0,0,0.2);
+}
+
+header > nav > ul li.selected{
+	color: #00579b;
+	font-weight: 500;
+    border-bottom-color: #00579b;
+}
 
 
 

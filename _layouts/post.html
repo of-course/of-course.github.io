@@ -11,6 +11,7 @@ layout: compress
 	<link rel="stylesheet" type="text/css" href="{{ '/css/post.css?20190720' | absolute_url }}">
 
 	<script type="text/javascript" src="https://assets.colorscripter.com/libs/3/colorscripter.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" integrity="sha256-m1eTvwEHwmsw4+XKF7BshClVJEPwTVycveNl0CS0Mkk=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
@@ -69,6 +70,10 @@ layout: compress
 		</div>
 	
 		<script type="text/javascript">
+			anchors.options = {
+				placement: 'left'
+			};
+			anchors.add('h2');
 
 			(function() {
 				/* rendering output */

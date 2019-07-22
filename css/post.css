@@ -1,6 +1,12 @@
 @charset "utf-8";
 
-aside.ad{ display: none; }
+a.anchorjs-link{
+	color: #aaa;
+	margin-top: 6px;
+}
+a.anchorjs-link:hover{
+	color: #999;
+}
 
 .post{
 	max-width: 900px;
@@ -29,6 +35,7 @@ aside.ad{ display: none; }
 	border: 1px solid #fde394;
 	border-radius: 5px;
 	color: #544300;
+	font-size: 17px;
 }
 
 .post .output-label {
@@ -46,6 +53,7 @@ aside.ad{ display: none; }
 	padding: 5px;
 	position: relative;
 	font-size: 16px;
+	line-height: 1;
 }
 .post .output h2,
 .post .output h3,
