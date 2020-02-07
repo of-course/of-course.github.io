@@ -73,9 +73,9 @@ categories: css
 		border: 1px solid #AAA;
 	}
 	#box3-1{ background-repeat: no-repeat }
-	#box3-2{ background-repeat: repeat }
 	#box3-2{ background-repeat: repeat-x }
 	#box3-3{ background-repeat: repeat-y }
+	#box3-4{ background-repeat: repeat }
 </style>
 
 <div id="box3-1" class="abox"></div>
