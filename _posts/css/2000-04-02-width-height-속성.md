@@ -25,7 +25,7 @@ categories: css
 		150x80
 	</div>
 	<div style="width: 60px; height: 200px; background-color: #fde6ff; border: 2px solid #90C;">
-		90x120
+		60x200
 	</div>
 </body>
 </html>
